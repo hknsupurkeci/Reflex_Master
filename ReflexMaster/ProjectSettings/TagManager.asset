@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - FingerDetector
+  - score
   layers:
   - Default
   - TransparentFX

@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
     public float spawnTime = 1;
     public float radius = 5;
     public GameObject characterPrefab;
-    // Start is called before the first frame update
+    [SerializeField] private TextMeshProUGUI _score;
+
+    float timer = 0f;
+    float countdownDuration = 1f; // Saniye
+    public static int score = 0;
+
     void Start()
     {
         StartCoroutine(Spawner());
     }
-    
+    private void FixedUpdate()
+    {
+        timer += Time.deltaTime;
+        if (timer >= countdownDuration)
+        {
+            score += 1;
+            _score.text = score.ToString();
+            timer = 0f;
+        }
+    }
     IEnumerator Spawner()
     {
         while (true)
