@@ -18,9 +18,15 @@ public class FingerDetector : MonoBehaviour
             {
                 Vector2 touchPosition = mainCamera.ScreenToWorldPoint(touch.position);
                 transform.position = touchPosition;
-                // Burada týklanan noktanýn dünya koordinatlarýný kullanabilirsiniz
-                //Debug.Log("Týklanan nokta: " + touchPosition);
             }
+        }
+    }
+    private void LateUpdate()
+    {
+        if (Input.touchCount <= 0)
+        {
+            Vector2 touchPosition = new Vector2(999, 999);
+            transform.position = touchPosition;
         }
     }
 }
