@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9157904555263931730}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cf5c77f02a53f4b8209edcae4c3d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hexagonPiecePrefab: {fileID: 0}
-  speed: 5
+  hexagonPiecePrefab: {fileID: 1180455988660558166, guid: d569ce6289d79b74f84f65be55eb2739, type: 3}
+  speed: 1
 --- !u!61 &5345594332570526716
 BoxCollider2D:
   m_ObjectHideFlags: 0

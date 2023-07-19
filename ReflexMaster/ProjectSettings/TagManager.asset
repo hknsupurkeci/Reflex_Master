@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FingerDetector
   - score
+  - enemy
   layers:
   - Default
   - TransparentFX

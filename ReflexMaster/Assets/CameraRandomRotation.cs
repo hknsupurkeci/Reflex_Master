@@ -19,14 +19,17 @@ public class CameraRandomRotation : MonoBehaviour
 
     private void Update()
     {
-        if (remainingRotationDuration <= 0f)
+        if (UIController.isStart)
         {
-            SetRandomRotation();
-        }
+            if (remainingRotationDuration <= 0f)
+            {
+                SetRandomRotation();
+            }
 
-        float rotationAmount = rotationSpeed * Time.deltaTime * rotationDirection;
-        transform.Rotate(0f, 0f, rotationAmount);
-        remainingRotationDuration -= Time.deltaTime;
+            float rotationAmount = rotationSpeed * Time.deltaTime * rotationDirection;
+            transform.Rotate(0f, 0f, rotationAmount);
+            remainingRotationDuration -= Time.deltaTime;
+        }
     }
 
     private void SetRandomRotation()
